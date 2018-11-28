@@ -17,7 +17,7 @@ When arrays are dynamically allocated, the compiler reserves space that can cont
 
 The `new` keyword returns the address of the first element of the array. Essentially, this means the address returned is the address of the first element of the array with the specified data type. In our example, it will return the address of the first `int` in the array. This is the reason why we can assign this to an `int*`.
 
-The (dynamic_arrays.cpp)[dynamic_arrays.cpp] provides sample code that you can run and compile.
+The [dynamic_arrays.cpp](dynamic_arrays.cpp) file provides sample code that you can run and compile.
 
 Now consider creating an array of `int` pointers (or `int*`). Every element of the array would hold the address of an `int` and can be written as `new int*[10]`. We can use the same pattern to create an array of object pointers. For example, `new student*[10]`.
 
@@ -69,4 +69,6 @@ delete[] cpsc121_locations;
 ```
 We use `delete` for each element of the array if it is the address of a single object. We use `delete[]` for the array.
 
-The (dynamic_pointer_arrays.cpp)[dynamic_pointer_arrays.cpp] provides sample code that you can run and compile.
+The [dynamic_pointer_arrays.cpp](dynamic_pointer_arrays.cpp) file provides sample code that you can run and compile.
+
+You can also see [pen.cpp](pen.cpp) for a full example.
