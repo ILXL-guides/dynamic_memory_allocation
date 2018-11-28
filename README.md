@@ -35,8 +35,8 @@ Take note that the array we created contains addresses instead of the values. Th
 
 ```cpp
 int i = 5;
-cout << *(value_locations[i]); // bracket notation
-cout << *(*(value_locations+i)); // pointer arithmetic
+cout << values[i]; // bracket notation
+cout << *(values+i); // pointer arithmetic
 ```
 
 Although it looks more complex, we apply the same logic for a dynamically created array of object pointers
