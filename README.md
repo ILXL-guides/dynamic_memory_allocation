@@ -44,6 +44,7 @@ Although it looks more complex, we apply the same logic for a dynamically create
 
 ```cpp
 int i = 5;
+student** cpsc121_locations = new student*[10];
 (*cpsc121_locations[i]).display(); // bracket notation and dereferencing to call method
 cpsc121_locations[i]->display(); // bracket notation and arrow notation to call method
 (*(*(cpsc121_locations+i))).display(); // pointer arithmetic and dereferencing to call method
