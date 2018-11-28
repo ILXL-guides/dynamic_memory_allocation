@@ -47,5 +47,15 @@ int i = 5;
 cpsc121_locations[i]->display(); // bracket notation and arrow notation to call method
 (*(*(cpsc121_locations+i))).display(); // pointer arithmetic and dereferencing to call method
 (*(cpsc121_locations+i))->display(); // pointer arithmetic and arrow notation to call method
-
 ```
+
+### Deallocating the dynamically created array of pointers
+Each element of the dynamically created array is itself an address that needs to be deallocated. Therefore we should not only deallocate the space used by the array, but also each address contained by its elements. We can use a loop to traverse the array and deallocate each element then deallocate the array as shown below.
+
+```cpp
+for (int i = 0; i < 10; i++) {
+  delete cpsc121_locations[i];
+}
+delete[] cpsc121_locations;
+```
+We use `delete` for each element of the array if it is the address of a single object. We use `delete[]` for the array.
