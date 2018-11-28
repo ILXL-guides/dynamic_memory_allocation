@@ -23,8 +23,11 @@ int main() {
   // because we only allocated 2 ints
   delete value_locations[0];
   delete value_locations[1];
+  value_locations[0] = nullptr;
+  value_locations[0] = nullptr;
   // The array should be deleted only after its individual elements are deleted
   delete[] value_locations;
+  value_locations = nullptr;
 
   // dynamic creation of a student stored as an element of the array that is
   // necessary before calling its methods
@@ -58,8 +61,11 @@ int main() {
   // because we only allocated 2 student objects
   delete cpsc121_locations[0];
   delete cpsc121_locations[1];
+  cpsc121_locations[0] = nullptr;
+  cpsc121_locations[1] = nullptr;
   // The array should be deleted only after its individual elements are deleted
   delete[] cpsc121_locations;
+  cpsc121_locations = nullptr;
 
   return 0;
 }

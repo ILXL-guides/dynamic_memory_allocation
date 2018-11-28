@@ -30,6 +30,8 @@ int main() {
   // deallocating the array
   delete[] values;
   delete[] cpsc121;
+  values = nullptr;
+  cpsc121 = nullptr;
 
   return 0;
 }

@@ -21,7 +21,7 @@ int main() {
   // all addresses of the objects stored in the array need to be deleted first
   for (int i = 0; i < 3; i++) {
     delete assorted_pens[i];
-    assorted_pens = nullptr;
+    assorted_pens[i] = nullptr;
   }
   // after deleting each element then the array can be deleted
   delete[] assorted_pens;
