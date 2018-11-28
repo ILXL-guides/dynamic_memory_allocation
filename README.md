@@ -71,4 +71,4 @@ We use `delete` for each element of the array if it is the address of a single o
 
 The [dynamic_pointer_arrays.cpp](dynamic_pointer_arrays.cpp) file provides sample code that you can run and compile.
 
-You can also see [pens.cpp](pens.cpp) for a full example.
+You can also see [pens.cpp](pens.cpp) and [pens.hpp](pens.hpp) for a full example that uses dynamically allocated pointer arrays with polymorphism.
