@@ -35,16 +35,23 @@ Take note that the array we created contains addresses instead of the values. Th
 
 ```cpp
 int i = 5;
-cout << *(value_locations[i]); // bracket notation
-cout << *(*(value_locations+i)); // pointer arithmetic
+int* values = new int[10]; // dynamic array of int
+values[i] = 35; // assign value to element in index i
+cout << values[i]; // bracket notation
+cout << *(values+i); // pointer arithmetic
 ```
 
 Although it looks more complex, we apply the same logic for a dynamically created array of object pointers
 
 ```cpp
 int i = 5;
-(*cpsc121_locations[i]).display(); // bracket notation and dereferencing to call method
-cpsc121_locations[i]->display(); // bracket notation and arrow notation to call method
+student** cpsc121_locations = new student*[10]; // dynamic array of student pointers
+
+cpsc121_locations[i] = new student; // create a student object and store its address in index 5 of the array
+
+// Variations for accessing the student object's functions
+(*cpsc121_locations[i]).set_name("Julian"); // bracket notation and dereferencing to call method
+cpsc121_locations[i]->set_id(12345); // bracket notation and arrow notation to call method
 (*(*(cpsc121_locations+i))).display(); // pointer arithmetic and dereferencing to call method
 (*(cpsc121_locations+i))->display(); // pointer arithmetic and arrow notation to call method
 ```
