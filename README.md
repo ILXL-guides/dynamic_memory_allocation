@@ -35,6 +35,7 @@ Take note that the array we created contains addresses instead of the values. Th
 
 ```cpp
 int i = 5;
+int* values = new int[10]; // dynamic array of int
 cout << values[i]; // bracket notation
 cout << *(values+i); // pointer arithmetic
 ```
