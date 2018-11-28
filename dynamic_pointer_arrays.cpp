@@ -47,6 +47,13 @@ int main() {
   (*(cpsc121_locations + i))->set_id(6789);
   (*(cpsc121_locations + i))->display();
 
+
+  cpsc121_locations[i] = new student;
+  (*cpsc121_locations[i]).set_name("Julian"); // bracket notation and dereferencing to call method
+  cpsc121_locations[i]->set_id(12345); // bracket notation and arrow notation to call method
+  (*(*(cpsc121_locations+i))).display(); // pointer arithmetic and dereferencing to call method
+  (*(cpsc121_locations+i))->display(); // pointer arithmetic and arrow notation to call method
+
   // Each element is an address that needs to be deleted. We only delete 2
   // because we only allocated 2 student objects
   delete cpsc121_locations[0];
